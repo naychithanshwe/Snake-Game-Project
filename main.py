@@ -10,8 +10,9 @@
 from turtle import Turtle,Screen
 
 screen = Screen()
-screen.setup(600,600)
+screen.setup(600,600) #screen size
 screen.title("Snake Game")
 screen.bgcolor("Black")
 
+snake =
 screen.exitonclick()
