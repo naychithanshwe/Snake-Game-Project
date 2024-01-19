@@ -14,5 +14,13 @@ screen.setup(600,600) #screen size
 screen.title("Snake Game")
 screen.bgcolor("Black")
 
-snake =
+segments = []
+starting_positions = [(0,0),(-20,0),(-40,0)]
+for segment in range(0,3):
+    snake = Turtle("square")
+    snake.color("White")
+    snake.penup()
+    snake.goto(starting_positions[segment])
+    segments.append(segment)
+
 screen.exitonclick()
