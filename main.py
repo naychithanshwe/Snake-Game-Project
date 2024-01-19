@@ -8,19 +8,26 @@
 # step 7: collision with tail
 
 from turtle import Turtle,Screen
+import time
+from snake import Snake
 
+#create screen
 screen = Screen()
 screen.setup(600,600) #screen size
 screen.title("Snake Game")
 screen.bgcolor("Black")
+screen.tracer() # to remove trace of animation
 
-segments = []
-starting_positions = [(0,0),(-20,0),(-40,0)]
-for segment in range(0,3):
-    snake = Turtle("square")
-    snake.color("White")
-    snake.penup()
-    snake.goto(starting_positions[segment])
-    segments.append(segment)
+snake = Snake()
+
+# move the snake
+game_is_on = True
+while game_is_on:
+    screen.update()
+    time.sleep(0.1)
+    snake.move()
+
+
+
 
 screen.exitonclick()
