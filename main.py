@@ -10,7 +10,7 @@
 from turtle import Turtle,Screen
 import time
 from snake import Snake
-
+from food import Food
 # create screen
 screen = Screen()
 screen.setup(600,600) # screen size
@@ -19,7 +19,7 @@ screen.bgcolor("Black")
 screen.tracer() # to remove trace of animation
 
 snake = Snake()
-
+food = Food()
 # control the snake direction with arrow keys
 screen.listen()
 screen.onkey(snake.up,"Up")
