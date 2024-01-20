@@ -22,7 +22,7 @@ screen.bgcolor("Black")
 snake = Snake()
 food = Food()
 scoreboard = ScoreBoard()
-screen.tracer()  # to remove trace of animation
+screen.tracer(0)  # to remove trace of animation
 
 # control the snake direction with arrow keys
 screen.listen()
@@ -42,6 +42,7 @@ while game_is_on:
     if snake.head.distance(food) < 20:
         food.refresh()
         scoreboard.scored()
+        snake.extend()
 
     # wall collision detection
     if snake.head.xcor() > 290 or snake.head.ycor() > 290 or \
